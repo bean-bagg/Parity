@@ -122,8 +122,8 @@ Create a `.env` file inside the `backend/` folder:
 
 ```env
 PORT=5001
-MONGO_URI= # your MongoDB URI
-JWT_SECRET=replace_this_with_a_long_random_string
+MONGO_URI= # your MongoDB URI here
+JWT_SECRET= # any long string here
 CLIENT_URL=http://localhost:3000
 ```
 
@@ -131,7 +131,7 @@ Start the backend:
 
 ```bash
 node server.js
-# → Server running on port 5000
+# → Server running on port 5001
 # → Connected to MongoDB
 ```
 
@@ -140,14 +140,14 @@ node server.js
 ### Step 3 — Set up the frontend
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
 Create a `.env.local` file inside the `frontend/` folder:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000
+NEXT_PUBLIC_API_URL=http://localhost:5001
 ```
 
 Start the frontend:
@@ -159,6 +159,6 @@ npm run dev
 
 Open `http://localhost:3000` in your browser. Sign up for an account, create a room, and start coding.
 
-> To test collaboration, open the same room in a second browser window (or share the Room ID with a friend).
+> To test collaboration, open the same room in a second browser window (then share the Room ID with a friend).
 
 ---
