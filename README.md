@@ -1,4 +1,4 @@
-# Parity - A Collaborative Code Editor
+# Parity - Collaborative Code Editor
 
 > **"Code together! Grow faster!"**
 
@@ -96,7 +96,7 @@ Parity/
 
 Before running Parity locally, make sure you have:
 
-- **Node.js** v18
+- **Node.js** v18 (recommended) or higher
 - **MongoDB** — a local instance or a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster
 - **Judge0 CE** — running locally on port `2358`. See the [Judge0 setup guide](https://github.com/judge0/judge0/blob/master/CHANGELOG.md) for Docker-based installation.
 
@@ -160,5 +160,24 @@ npm run dev
 Open `http://localhost:3000` in your browser. Sign up for an account, create a room, and start coding.
 
 > To test collaboration, open the same room in a second browser window (then share the Room ID with a friend).
+
+---
+
+## Environment Variables
+
+### Backend (`backend/.env`)
+
+| Variable | Description |
+|----------|-------------|
+| `PORT` | Port the Express server listens on (default: `5001`) |
+| `MONGO_URI` | MongoDB connection string |
+| `JWT_SECRET` | Secret key for signing and verifying JWT tokens |
+| `CLIENT_URL` | Frontend origin — used for CORS and Socket.IO allowed origins |
+
+### Frontend (`frontend/.env.local`)
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_API_URL` | Base URL of the backend API and WebSocket server |
 
 ---
